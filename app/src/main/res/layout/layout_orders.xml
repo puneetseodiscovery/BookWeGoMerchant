@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_dp25">
+
+        <ImageView
+            android:id="@+id/img_orders"
+            android:layout_width="@dimen/margin_dp150"
+            android:layout_height="@dimen/margin_dp100"
+            android:layout_marginLeft="@dimen/margin_dp15"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_140" />
+
+        <TextView
+            android:id="@+id/tv_ordername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_dp20"
+            android:layout_marginTop="@dimen/margin_dp7"
+            android:layout_toRightOf="@+id/img_orders"
+            android:text="Ester 51"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/textsize_sp12" />
+
+        <TextView
+            android:id="@+id/tv_orderdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_ordername"
+            android:layout_alignLeft="@+id/tv_ordername"
+            android:layout_marginTop="@dimen/margin_dp3"
+            android:text="20/2/2019,10:25 AM"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/textsize_sp12" />
+
+        <TextView
+            android:id="@+id/tv_thali_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_orderdate"
+            android:layout_alignLeft="@+id/tv_ordername"
+            android:layout_marginTop="@dimen/margin_dp3"
+            android:text="Executive Thali Combo X1"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/textsize_sp12" />
+
+        <TextView
+            android:id="@+id/tv_thali_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_thali_name"
+            android:layout_alignLeft="@+id/tv_ordername"
+            android:layout_marginTop="@dimen/margin_dp3"
+            android:text="Rs.250"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/textsize_sp12" />
+
+        <com.codesgood.views.JustifiedTextView
+            android:id="@+id/tv_additional_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_thali_price"
+            android:layout_alignLeft="@+id/tv_ordername"
+            android:layout_marginTop="@dimen/margin_dp8"
+            android:text="Additional Info:It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/textsize_sp12"
+            android:layout_marginRight="@dimen/margin_dp15"/>
+
+        <RelativeLayout
+            android:id="@+id/layout_status"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_dp25"
+            android:layout_marginTop="@dimen/margin_dp7"
+            android:layout_alignRight="@+id/tv_additional_info"
+            android:layout_below="@+id/tv_additional_info">
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status:"
+                android:layout_centerVertical="true"
+                android:textColor="@color/colorTextGreen"
+                android:textSize="@dimen/textsize_sp15"/>
+
+            <TextView
+                android:id="@+id/tv_Delivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivery"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/status"
+                android:textColor="@color/colorTextGrey"
+                android:textSize="@dimen/textsize_sp15"/>
+        </RelativeLayout>
+        <View
+            android:id="@+id/view_status"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_size_dp0.5"
+            android:layout_below="@+id/layout_status"
+            android:layout_marginTop="@dimen/margin_dp5"
+            android:layout_marginRight="@dimen/margin_dp15"
+            android:layout_marginLeft="@dimen/margin_dp15"
+            android:background="@color/colorTextGrey" />
+
+        <RelativeLayout
+            android:id="@+id/layout_statusGone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_status"
+            android:layout_alignRight="@+id/view_status"
+            android:layout_alignLeft="@+id/view_status"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/margin_dp10">
+            <TextView
+                android:id="@+id/tv_orderstatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/order_sta"
+                android:textColor="@color/colorTextDarkGrey"
+                android:textSize="@dimen/textsize_sp15" />
+            <View
+                android:id="@+id/view_st"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/view_size_dp2"
+                android:layout_below="@+id/tv_orderstatus"
+                android:layout_alignLeft="@+id/tv_orderstatus"
+                android:layout_alignRight="@+id/tv_orderstatus"
+                android:background="@color/colorTextGreen" />
+
+
+            <TextView
+                android:id="@+id/tv_orderrecived"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_st"
+                android:layout_marginTop="@dimen/margin_dp25"
+                android:layout_toRightOf="@+id/tv_orderstatus"
+                android:drawableLeft="@drawable/ic_done"
+                android:drawablePadding="@dimen/padding_dp15"
+                android:text="@string/order_recived"
+                android:textColor="@color/colorTextDarkGrey"
+                android:textSize="@dimen/textsize_sp15" />
+
+            <RelativeLayout
+                android:id="@+id/dotview_1"
+                android:layout_width="200dp"
+                android:layout_height="@dimen/margin_dp70"
+                android:layout_below="@+id/tv_orderrecived"
+                android:layout_marginLeft="@dimen/margin_dp16"
+                android:layout_marginTop="@dimen/margin_dp5"
+                android:background="@drawable/vertical_dashed_line"
+                android:orientation="vertical">
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_orderprepared"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dotview_1"
+                android:layout_marginTop="@dimen/margin_dp5"
+                android:layout_toRightOf="@+id/tv_orderstatus"
+                android:drawableLeft="@drawable/ic_circle"
+                android:drawablePadding="@dimen/padding_dp15"
+                android:text="@string/food_being_prepared"
+                android:textColor="@color/colorTextDarkGrey"
+                android:textSize="@dimen/textsize_sp15" />
+
+            <RelativeLayout
+                android:id="@+id/dotview_2"
+                android:layout_width="200dp"
+                android:layout_height="@dimen/margin_dp70"
+                android:layout_below="@+id/tv_orderprepared"
+                android:layout_marginLeft="@dimen/margin_dp16"
+                android:layout_marginTop="@dimen/margin_dp5"
+                android:background="@drawable/vertical_dashed_line"
+                android:orientation="vertical"></RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_orderpacked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dotview_2"
+                android:layout_marginTop="@dimen/margin_dp5"
+                android:layout_toRightOf="@+id/tv_orderstatus"
+                android:drawableLeft="@drawable/ic_circle"
+                android:drawablePadding="@dimen/padding_dp15"
+                android:text="@string/food_packed"
+                android:textColor="@color/colorTextDarkGrey"
+                android:textSize="@dimen/textsize_sp15" />
+
+            <RelativeLayout
+                android:id="@+id/dotview_3"
+                android:layout_width="200dp"
+                android:layout_height="@dimen/margin_dp70"
+                android:layout_below="@+id/tv_orderpacked"
+                android:layout_marginLeft="@dimen/margin_dp16"
+                android:layout_marginTop="@dimen/margin_dp5"
+                android:background="@drawable/vertical_dashed_line"
+                android:orientation="vertical"></RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_orderdelivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dotview_3"
+                android:layout_marginTop="@dimen/margin_dp5"
+                android:layout_toRightOf="@+id/tv_orderstatus"
+                android:drawableLeft="@drawable/ic_circle"
+                android:drawablePadding="@dimen/padding_dp15"
+                android:text="@string/food_out_for_delivery"
+                android:textColor="@color/colorTextDarkGrey"
+                android:textSize="@dimen/textsize_sp15" />
+
+            <RelativeLayout
+                android:id="@+id/dotview_4"
+                android:layout_width="200dp"
+                android:layout_height="@dimen/margin_dp70"
+                android:layout_below="@+id/tv_orderdelivery"
+                android:layout_marginLeft="@dimen/margin_dp16"
+                android:layout_marginTop="@dimen/margin_dp5"
+                android:background="@drawable/vertical_dashed_line"
+                android:orientation="vertical"></RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_orderdelivered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dotview_4"
+                android:layout_marginTop="@dimen/margin_dp5"
+                android:layout_toRightOf="@+id/tv_orderstatus"
+                android:drawableLeft="@drawable/ic_circle"
+                android:drawablePadding="@dimen/padding_dp15"
+                android:text="@string/food_delivered"
+                android:textColor="@color/colorTextDarkGrey"
+                android:textSize="@dimen/textsize_sp15" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_size_dp0.5"
+                android:layout_below="@+id/tv_orderdelivered"
+                android:layout_marginTop="@dimen/margin_dp15"
+                android:background="@color/colorTextGrey" />
+
+        </RelativeLayout>
+        </RelativeLayout>
+
+</RelativeLayout>

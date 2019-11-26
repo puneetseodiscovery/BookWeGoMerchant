@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_additional_info"
+            android:layout_alignRight="@+id/tv_additional_info"
+            android:layout_marginLeft="@dimen/margin_dp15"
+            android:layout_marginTop="@dimen/margin_dp7"
+            android:text="20 June 2018"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="@dimen/textsize_sp18" />
+
+        <TextView
+            android:id="@+id/tv_total_booking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_date"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_dp15"
+            android:text="3 Bookings"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="@dimen/textsize_sp18" />
+
+        <ImageView
+            android:id="@+id/img_edit_userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_date"
+            android:layout_alignLeft="@+id/tv_date"
+            android:layout_alignBottom="@+id/tv_username_U"
+            android:layout_marginLeft="@dimen/margin_dp5"
+            android:layout_marginTop="@dimen/margin_dp7"
+            android:src="@drawable/ic_mode_edit" />
+
+        <EditText
+            android:id="@+id/tv_username_U"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_date"
+            android:layout_alignRight="@+id/tv_additional_info"
+            android:layout_marginLeft="@dimen/margin_dp35"
+            android:layout_marginTop="@dimen/margin_dp7"
+            android:background="@android:color/transparent"
+            android:clickable="false"
+            android:editable="false"
+            android:enabled="true"
+            android:hint="Mohit Kumar"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/colorTextDarkGrey"
+            android:textColorHint="@color/colorTextDarkGrey"
+            android:textSize="@dimen/textsize_sp15" />
+
+        <TextView
+            android:id="@+id/tv_code_U"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_total_rating"
+            android:layout_alignTop="@+id/tv_username_U"
+            android:layout_alignRight="@+id/tv_total_booking"
+            android:layout_marginRight="@dimen/margin_dp15"
+            android:text="RDX177GR"
+            android:textColor="@color/colorTextDarkGrey"
+            android:textSize="@dimen/textsize_sp15" />
+
+
+        <ImageView
+            android:id="@+id/img_edit_pax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_username_U"
+            android:layout_alignLeft="@+id/tv_date"
+            android:layout_alignBottom="@+id/tv_orderdate_U"
+            android:layout_marginLeft="@dimen/margin_dp5"
+            android:layout_marginTop="@dimen/margin_dp7"
+            android:src="@drawable/ic_mode_edit" />
+
+        <TextView
+            android:id="@+id/tv_orderdate_U"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_username_U"
+            android:layout_alignLeft="@+id/tv_username_U"
+            android:layout_marginTop="@dimen/margin_dp3"
+            android:text="Today,12:30 pm,2 Pax,50%"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/textsize_sp13" />
+
+        <RelativeLayout
+            android:id="@+id/relative_table"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_below="@+id/tv_username_U"
+            android:layout_marginLeft="@dimen/margin_dp15"
+            android:layout_toRightOf="@+id/tv_orderdate_U">
+
+
+            <LinearLayout
+                android:id="@+id/layout_count"
+                android:layout_width="@dimen/margin_dp60"
+                android:layout_height="@dimen/margin_dp22"
+                android:layout_centerVertical="true"
+                android:background="@drawable/count_bg"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ImageView
+                    android:id="@+id/img_min"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_dp3"
+                    android:src="@drawable/img_min" />
+
+                <TextView
+                    android:id="@+id/tv_Count"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/colorTextGreen" />
+
+                <ImageView
+                    android:id="@+id/img_max"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_dp3"
+                    android:src="@drawable/img_add" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_remarks_U"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_upcomming_U"
+            android:layout_alignLeft="@+id/tv_username_U"
+            android:layout_marginTop="@dimen/margin_dp3"
+            android:text="Remarks about this Customer."
+            android:textColor="@color/colorText5"
+            android:textSize="@dimen/textsize_sp12" />
+
+        <TextView
+            android:id="@+id/tv_upcomming_U"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_orderdate_U"
+            android:layout_alignLeft="@+id/tv_username_U"
+            android:layout_marginTop="@dimen/margin_dp3"
+            android:text="Upcomming"
+            android:textColor="@color/colorTextYellow"
+            android:textSize="@dimen/textsize_sp15" />
+
+        <View
+            android:id="@+id/view_U"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_size_dp0.5"
+            android:layout_below="@+id/tv_remarks_U"
+            android:layout_marginLeft="@dimen/margin_dp20"
+            android:layout_marginTop="@dimen/margin_dp12"
+            android:background="@color/colorTextGrey" />
+
+
+        <TextView
+            android:id="@+id/tv_username_A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_U"
+            android:layout_alignRight="@+id/tv_additional_info"
+            android:layout_marginLeft="@dimen/margin_dp35"
+            android:layout_marginTop="@dimen/margin_dp12"
+            android:text="Mohit Kumar"
+            android:textColor="@color/colorTextDarkGrey"
+            android:textSize="@dimen/textsize_sp15" />
+
+        <TextView
+            android:id="@+id/tv_code_A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_U"
+            android:layout_alignTop="@+id/tv_username_A"
+            android:layout_alignRight="@+id/tv_total_booking"
+            android:layout_marginRight="@dimen/margin_dp15"
+            android:text="RDX177GR"
+            android:textColor="@color/colorTextDarkGrey"
+            android:textSize="@dimen/textsize_sp15" />
+
+        <TextView
+            android:id="@+id/tv_orderdate_A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_username_A"
+            android:layout_alignLeft="@+id/tv_username_A"
+            android:layout_marginTop="@dimen/margin_dp3"
+            android:text="Today,12:30 pm,2 Pax,50%"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/textsize_sp13" />
+
+
+        <TextView
+            android:id="@+id/tv_upcomming_A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_orderdate_A"
+            android:layout_alignLeft="@+id/tv_username_A"
+            android:layout_marginTop="@dimen/margin_dp3"
+            android:text="Attended"
+            android:textColor="@color/colorTextGreen"
+            android:textSize="@dimen/textsize_sp15" />
+
+
+        <View
+            android:id="@+id/view_A"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_size_dp0.5"
+            android:layout_below="@+id/tv_upcomming_A"
+            android:layout_marginLeft="@dimen/margin_dp20"
+            android:layout_marginTop="@dimen/margin_dp12"
+            android:background="@color/colorTextGrey" />
+
+
+        <TextView
+            android:id="@+id/tv_username_C"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_A"
+            android:layout_alignRight="@+id/tv_additional_info"
+            android:layout_marginLeft="@dimen/margin_dp35"
+            android:layout_marginTop="@dimen/margin_dp12"
+            android:text="Mohit Kumar"
+            android:textColor="@color/colorTextDarkGrey"
+            android:textSize="@dimen/textsize_sp15" />
+
+        <TextView
+            android:id="@+id/tv_code_C"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_A"
+            android:layout_alignTop="@+id/tv_username_C"
+            android:layout_alignRight="@+id/tv_total_booking"
+            android:layout_marginRight="@dimen/margin_dp15"
+            android:text="RDX177GR"
+            android:textColor="@color/colorTextDarkGrey"
+            android:textSize="@dimen/textsize_sp15" />
+
+        <TextView
+            android:id="@+id/tv_orderdate_C"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_username_C"
+            android:layout_alignLeft="@+id/tv_username_C"
+            android:layout_marginTop="@dimen/margin_dp3"
+            android:text="Today,12:30 pm,2 Pax,50%"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/textsize_sp13" />
+
+        <TextView
+            android:id="@+id/tv_starttime_C"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_orderdate_C"
+            android:layout_alignLeft="@+id/tv_username_C"
+            android:layout_marginTop="@dimen/margin_dp3"
+            android:text="Made on 10:50 am"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/textsize_sp13" />
+
+        <TextView
+            android:id="@+id/tv_upcomming_C"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_starttime_C"
+            android:layout_alignLeft="@+id/tv_username_C"
+            android:layout_marginTop="@dimen/margin_dp3"
+            android:text="Cancelled"
+            android:textColor="@color/colorTextRed"
+            android:textSize="@dimen/textsize_sp15" />
+
+
+        <View
+            android:id="@+id/view_C"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_size_dp1"
+            android:layout_below="@+id/tv_upcomming_C"
+            android:layout_marginTop="@dimen/margin_dp12"
+            android:background="@color/colorTextGrey" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

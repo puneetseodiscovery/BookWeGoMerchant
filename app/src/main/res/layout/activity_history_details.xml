@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".historyDetailsActivity.HistoryDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_dp60"
+        android:background="@drawable/gradient_bg">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:padding="@dimen/padding_dp10"
+            android:src="@drawable/back_btn" />
+
+
+        <TextView
+            android:id="@+id/title_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/margin_dp5"
+            android:drawableTop="@drawable/top_logo"
+            android:gravity="center"
+            android:text="History"
+            android:textColor="@color/colorTextWhite"
+            android:textSize="@dimen/textsize_sp17" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_actionbar"
+        android:background="@color/colorTextGreen">
+
+        <ImageView
+            android:id="@+id/img_orders"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_dp150"
+            android:scaleType="fitXY"
+            android:src="@drawable/banner" />
+
+        <TextView
+            android:id="@+id/tv_ordername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Drinky 51 @ 321 Clementi"
+            android:textColor="@color/colorTextWhite"
+            android:textSize="@dimen/textsize_sp17" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_HistoryDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_order">
+
+    </android.support.v7.widget.RecyclerView>
+</RelativeLayout>

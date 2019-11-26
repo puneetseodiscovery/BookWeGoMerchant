@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookingReports.BookingReportsActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_dp60"
+        android:background="@drawable/gradient_bg">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:padding="@dimen/padding_dp10"
+            android:src="@drawable/back_btn" />
+
+        <TextView
+            android:id="@+id/tv_clickUnclik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/margin_dp5"
+            android:drawableTop="@drawable/top_logo"
+            android:gravity="center"
+            android:text="Bookings Reports"
+            android:textColor="@color/colorTextWhite"
+            android:textSize="@dimen/textsize_sp17" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_list"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_dp60"
+        android:layout_below="@+id/layout_actionbar">
+
+        <View
+            android:id="@+id/view_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_size_dp1"
+            android:layout_marginTop="@dimen/margin_dp5"
+            android:background="@color/colorTextGrey" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/bookingReportList"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/view_1"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/margin_dp5"
+            android:paddingRight="@dimen/padding_dp10"
+            android:paddingLeft="@dimen/padding_dp10">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <View
+            android:id="@+id/view_2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_size_dp1"
+            android:layout_below="@+id/bookingReportList"
+            android:layout_marginTop="-5dp"
+            android:background="@color/colorTextGrey" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_linechart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@+id/layout_list">
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/linechart"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_dp250" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:layout_below="@+id/layout_list">
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/piechart"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_dp250">
+
+        </com.github.mikephil.charting.charts.PieChart>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_booking_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/piechart"
+            android:layout_marginLeft="@dimen/margin_dp10"
+            android:layout_marginTop="@dimen/margin_dp25"
+            android:layout_marginRight="@dimen/margin_dp10"
+            android:elevation="@dimen/textsize_sp4"
+            app:cardCornerRadius="@dimen/margin_dp8">
+
+            <RelativeLayout
+                android:id="@+id/layout_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_dp8">
+
+                <LinearLayout
+                    android:id="@+id/layout_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_totalBooking"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="11"
+                        android:textColor="@color/colorTextGreen"
+                        android:textSize="@dimen/textsize_sp25" />
+
+                    <TextView
+                        android:id="@+id/tv_totalseates"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="19"
+                        android:textColor="@color/colorTextGreen"
+                        android:textSize="@dimen/textsize_sp25" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_1"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_Booking"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Bookings"
+                        android:textColor="@color/colorTextGreen"
+                        android:textSize="@dimen/textsize_sp25" />
+
+                    <TextView
+                        android:id="@+id/tv_seates"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Seats"
+                        android:textColor="@color/colorTextGreen"
+                        android:textSize="@dimen/textsize_sp25" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_bookings"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_size_dp0.5"
+                    android:layout_below="@+id/layout_2"
+                    android:layout_marginTop="@dimen/margin_dp20"
+                    android:background="@color/colorTextDarkGrey" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_bookings"
+                    android:layout_marginTop="@dimen/margin_dp20">
+
+                    <LinearLayout
+                        android:id="@+id/layout_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ovel_green"
+                                android:gravity="center"
+                                android:text="6"
+                                android:textColor="@color/colorTextWhite"
+                                android:textSize="@dimen/textsize_sp18" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ovel_gold"
+                                android:gravity="center"
+                                android:text="5"
+                                android:textColor="@color/colorTextWhite"
+                                android:textSize="@dimen/textsize_sp18" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ovel_grey"
+                                android:gravity="center"
+                                android:text="3"
+                                android:textColor="@color/colorTextWhite"
+                                android:textSize="@dimen/textsize_sp18" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ovel_red"
+                                android:gravity="center"
+                                android:text="5"
+                                android:textColor="@color/colorTextWhite"
+                                android:textSize="@dimen/textsize_sp18" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_counttitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_count"
+                        android:layout_marginTop="@dimen/margin_dp10"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="@dimen/margin_dp5"
+                            android:text="Attended"
+                            android:textColor="@color/colorTextGrey"
+                            android:textSize="@dimen/textsize_sp11" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="@dimen/margin_dp5"
+                            android:text="Upcomming"
+                            android:textColor="@color/colorTextGrey"
+                            android:textSize="@dimen/textsize_sp11" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="@dimen/margin_dp5"
+                            android:text="Now Show"
+                            android:textColor="@color/colorTextGrey"
+                            android:textSize="@dimen/textsize_sp11" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="@dimen/margin_dp5"
+                            android:text="Cancelled"
+                            android:textColor="@color/colorTextGrey"
+                            android:textSize="@dimen/textsize_sp11" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
